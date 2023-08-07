@@ -41,10 +41,15 @@ Passa do stage para o commit
 git commit -m "comentários"
 ```
 Passa para o github (nuvem)
+
 ```
 git push
 ```
-
+Obs.:
+Na primeira vez use o comando abaixo inves do git push
+```
+git push --set-upstream origin master
+```
 
 
 ## Node
