@@ -29,7 +29,7 @@ git remote add origin https://github.com/taticar/api-node-express.git
 Status do arquivo
 ```
 U - untrack (novo)
-M - modifi (modificado)
+M - modified (modificado)
 D - Deletado
 ```
 Passa os arquivos no stage
