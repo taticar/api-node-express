@@ -41,15 +41,27 @@ Passa do stage para o commit
 git commit -m "comentários"
 ```
 Passa para o github (nuvem)
-
 ```
 git push
 ```
 Obs.:
-Na primeira vez use o comando abaixo inves do git push
+Na primeira vez use o comando abaixo invês do git push
 ```
 git push --set-upstream origin master
 ```
+Abrir o projeto em computador que não o contém, comando dentro da pasta que quero salvar no cmd ou terminal (projeto inteiro)
+```
+C:\Users\cg3025039\Development> git clone https://github.com/taticar/api-node-express.git
+```
+Baixar as atualizações feita em outros sítios (somente atualizações)
+```
+git pull
+```
+Verificar se tem atualizações.
+```
+git fetch
+```
+
 
 
 ## Node

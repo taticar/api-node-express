@@ -1,0 +1,33 @@
+{
+  "name": "api-node-express",
+  "version": "1.0.0",
+  "description": "Projeto node framework express",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taticar/api-node-express.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "javascript",
+    "mysql",
+    "express",
+    "mvc"
+  ],
+  "author": "Tatiana de Carvalho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taticar/api-node-express/issues"
+  },
+  "homepage": "https://github.com/taticar/api-node-express#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
