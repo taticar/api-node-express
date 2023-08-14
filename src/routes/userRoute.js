@@ -14,7 +14,7 @@ router.put('/', (req, res) => {
     res.json({message: "metódo put"});
 });
 
-router.delete('/', (req, res) => {
+router.delete('/', (req, rens) => {
     res.json({message: "metódo delete"});
 });
 

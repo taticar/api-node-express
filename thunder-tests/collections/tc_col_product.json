@@ -1,0 +1,23 @@
+{
+    "_id": "5992abce-ae7c-49ea-a9b0-bf2e300950c8",
+    "colName": "product",
+    "created": "2023-08-14T20:42:34.750Z",
+    "sortNum": 10000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "2c4c3e5b-e522-4b9d-a93e-03a6dd16ffde",
+            "colId": "5992abce-ae7c-49ea-a9b0-bf2e300950c8",
+            "containerId": "",
+            "name": "/product",
+            "url": "http://192.168.159.1:3000/product",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-08-14T20:42:34.755Z",
+            "modified": "2023-08-14T20:42:34.755Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
