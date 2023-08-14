@@ -74,7 +74,25 @@ Verifica a versão do node instalado
 ```
 npm -v
 ```
+Inicializa o gerenciador de pacotes em um novo projeto.
+```
+npm init
+```
+Instala um novo pacote
+```
+npm i [nome-do-pacote]
+```
+Rodar os scripts do package json
+```
+npm run [nome do script]
+```
 
-
-
+Diferença entre import e require, basicamente a mesma coisa.
+-package.json
+"main": "src/server.js",
+"type": "module",
+//Estamos dizendo que ao invés do require usaremos o module.
+-server.js
+//const express = require('express'); trocar modulo de importação
+import express from 'express'
 
