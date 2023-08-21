@@ -1,7 +1,7 @@
 //const express = require('express');
 import express from 'express';
-import userRouter from './routes/userRoute.js';
-import productRouter from './routes/productRouter.js';
+import userRouter from './routers/userRoute.js';
+import productRouter from './routers/productRouter.js';
 
 const api = express();
 

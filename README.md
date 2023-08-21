@@ -96,3 +96,20 @@ Diferença entre import e require, basicamente a mesma coisa.
 //const express = require('express'); trocar modulo de importação
 import express from 'express'
 
+## MVC (Model Views Control)
+
+M model: guarda regras do projeto
+
+V views: visualização
+
+C control: comanda/controla
+
+DB banco de dados: 
+
+## Teste INSOMNIA
+
+
+
+
+
+
