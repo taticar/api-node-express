@@ -108,6 +108,15 @@ DB banco de dados:
 
 ## Teste INSOMNIA
 
+server.js => router => controllers => model => mysql
+
+GET /user pega os dados em JSON usaremos o MIDDLEWARE(converte JSON em String) - no server.js 
+//converte toda requisiçao com body json para objeto salvo no req.body
+import bodyParser from 'body-parser'; 
+api.use(bodyParser.json())
+
+
+
 
 
 
