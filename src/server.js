@@ -3,6 +3,7 @@ import express from 'express';
 import userRouter from './routers/userRoute.js';
 import productRouter from './routers/productRouter.js';
 import authRouter from './routers/authRouter.js';
+import {PORT} from './config.js'
 
 const api = express();
 
@@ -19,6 +20,6 @@ api.use('/auth', authRouter);
 
 
 
-api.listen(3000, ()=> {
-    console.log('Servidor rodando na porta 3000! http://localhost:3000');
+api.listen(PORT, ()=> {
+    console.log(`Servidor rodando na porta ${PORT}! http://localhost:${PORT}`);
 });
