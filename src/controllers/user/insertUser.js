@@ -1,18 +1,25 @@
-import insert from '../../models/userModel';
+import user from '../../models/userModel.js';
 
 const insertByUser = async (req, res) => {
-    const userData = req.body;
-    const [rows, fields] = await insert.insertByUser(userData.name, userData.email, userData.password); 
-    res.json({message: "metódo post"});
+    try{
+        const userData = req.body;
+        const [result] = await user.create(userData); 
+        if(result.affectedRows === 1){
+            res.json({
+                success: "Usuário inserido com sucesso!", user:{
+                    id: result.insertId,
+                    ...userData
+                }
+            })
+        }
+
+    }catch(error) {
+        console.log(error)
+        res.status(500).json({
+            error:"Erro no servidor!"
+        })
+    
 };
+}
 
-export default insertUser;
-
-// const getUser = async (req, res) => {
-//     const userData = req.body;
-//     const[rows, fields] = await user.getById(userData.id);
-//     res.json({
-//         sucess: "Usuário encontrado com sucesso!",
-//         user: rows[0]
-//     });
-// };
+export default insertByUser;
