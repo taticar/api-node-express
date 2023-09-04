@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Set-2023 às 22:23
+-- Tempo de geração: 28-Ago-2023 às 22:50
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -20,21 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `api-web`
 --
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `products`
---
-
-CREATE TABLE `products` (
-  `code` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL,
-  `description` varchar(50) NOT NULL,
-  `qtde` int(11) NOT NULL,
-  `validity` varchar(10) NOT NULL,
-  `price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -63,12 +48,6 @@ INSERT INTO `users` (`id`, `name`, `email`, `pass`) VALUES
 --
 
 --
--- Índices para tabela `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`code`);
-
---
 -- Índices para tabela `users`
 --
 ALTER TABLE `users`
@@ -77,12 +56,6 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
-
---
--- AUTO_INCREMENT de tabela `products`
---
-ALTER TABLE `products`
-  MODIFY `code` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `users`
