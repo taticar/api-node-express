@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Set-2023 às 22:23
+-- Tempo de geração: 25-Set-2023 às 19:51
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -46,17 +46,18 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `email` varchar(500) NOT NULL,
-  `pass` varchar(256) NOT NULL
+  `pass` varchar(256) NOT NULL,
+  `photo` varchar(700) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `pass`) VALUES
-(1, 'João', 'joao@gmail.com', '1234'),
-(2, 'Pedro', 'pedro@gmail.com', '1235'),
-(3, 'Lucia', 'lucia@gmail.com', '1236');
+INSERT INTO `users` (`id`, `name`, `email`, `pass`, `photo`) VALUES
+(1, 'Joana', 'joana@gmail.com', '1234', 'https://imgv3.fotor.com/images/videoImage/ai-generated-beautiful-girl-like-a-beautiful-model-by-Fotor-ai-image-generator_2023-05-16-073426_dnrx.jpg'),
+(2, 'Pedro', 'pedro@gmail.com', '1235', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmAkvW_76XthxFQZTPhntIvQzMCUvTYh8wjIbBOjx_9iz91CQyRbvjqNo4TpJAVGrEh00&usqp=CAU'),
+(3, 'Lucia', 'lucia@gmail.com', '1236', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTarE_5gaZCKV9BKteudRUtHTHVq26IYyft6WEwfGHW6wu5cxgaxe2CIJHAiTB8lZEjcfE&usqp=CAU');
 
 --
 -- Índices para tabelas despejadas
