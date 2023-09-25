@@ -1,6 +1,7 @@
 //const express = require('express');
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 
 import userRouter from './routers/userRoute.js';
 import productRouter from './routers/productRouter.js';
@@ -10,6 +11,7 @@ import {PORT} from './config.js'
 const api = express();
 
 //converte toda requisiçao com body json para objeto salvo no req.body
+api.use(cors());
 api.use(bodyParser.json());
 
 
