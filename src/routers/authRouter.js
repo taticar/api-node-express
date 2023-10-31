@@ -1,14 +1,12 @@
-import express from 'express';
+import express from 'express'
+import login from '../controllers/auth/login.js'
+import loginToken from '../controllers/auth/loginToken.js'  
+import logout from '../controllers/auth/logout.js'
 
-// controller auth
+const router = express.Router()
 
-import getAuth from '../controllers/auth/getAuth.js';
-import insertAuth from '../controllers/auth/insertAuth.js';
+router.post('/login', login)
+router.get('/login-token', loginToken)
+router.delete('/logout', logout)
 
-const router = express.Router();
-
-router.get('/login', getAuth);
-
-router.post('/logado', insertAuth);
-
-export default router;
+export default router

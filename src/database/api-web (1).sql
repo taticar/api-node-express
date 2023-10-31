@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25-Set-2023 às 19:51
+-- Tempo de geração: 23-Out-2023 às 22:13
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -24,16 +24,13 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `products`
+-- Estrutura da tabela `sessions`
 --
 
-CREATE TABLE `products` (
-  `code` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL,
-  `description` varchar(50) NOT NULL,
-  `qtde` int(11) NOT NULL,
-  `validity` varchar(10) NOT NULL,
-  `price` int(11) NOT NULL
+CREATE TABLE `sessions` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `token` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -55,19 +52,21 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `pass`, `photo`) VALUES
-(1, 'Joana', 'joana@gmail.com', '1234', 'https://imgv3.fotor.com/images/videoImage/ai-generated-beautiful-girl-like-a-beautiful-model-by-Fotor-ai-image-generator_2023-05-16-073426_dnrx.jpg'),
-(2, 'Pedro', 'pedro@gmail.com', '1235', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmAkvW_76XthxFQZTPhntIvQzMCUvTYh8wjIbBOjx_9iz91CQyRbvjqNo4TpJAVGrEh00&usqp=CAU'),
-(3, 'Lucia', 'lucia@gmail.com', '1236', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTarE_5gaZCKV9BKteudRUtHTHVq26IYyft6WEwfGHW6wu5cxgaxe2CIJHAiTB8lZEjcfE&usqp=CAU');
+(1, 'Renan C', 'renancavichi@gmail.com', '312321', 'https://avatars.githubusercontent.com/u/4259630?v=4'),
+(2, 'Maria', 'maria@gmail.com', '123123', 'https://avatars.githubusercontent.com/u/104683974?v=4'),
+(4, 'Rafael', 'rafael@gmail.com', '123123', 'https://avatars.githubusercontent.com/u/110418519?v=4');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `products`
+-- Índices para tabela `sessions`
 --
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`code`);
+ALTER TABLE `sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `index_token` (`token`) USING BTREE,
+  ADD KEY `id_user_user_id` (`id_user`);
 
 --
 -- Índices para tabela `users`
@@ -80,16 +79,26 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de tabela `products`
+-- AUTO_INCREMENT de tabela `sessions`
 --
-ALTER TABLE `products`
-  MODIFY `code` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `sessions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `sessions`
+--
+ALTER TABLE `sessions`
+  ADD CONSTRAINT `id_user_user_id` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
