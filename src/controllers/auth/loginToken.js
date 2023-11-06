@@ -14,7 +14,7 @@ const loginToken = async (req, res) => {
         console.log(userToken)
         const [rows] = await user.getById(userToken.id)
         if(rows.length === 0){
-            return res.status(400).json({
+            return res.status(404).json({
                 error: `Usuário não encontrado!`
             })
         }

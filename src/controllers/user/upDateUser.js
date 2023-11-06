@@ -3,7 +3,7 @@ import user from '../../models/userModel.js';
 const upDateUser = async (req, res) => {
     try{
         const userData = req.body;
-        const [result] = await user.upDateId(userData);
+        const [result] = await user.update(userData);
         if(result.affectedRows === 1){
             res.json({
                 success: "Alterado", 

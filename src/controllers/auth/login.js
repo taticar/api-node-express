@@ -34,7 +34,7 @@ const login = async (req, res) => {
             name: userFound.name
         }, TOKEN_SECRET)    
         await session.create(userFound.id, token)
-        res.cookie('token', token, { httpOnly: true, sameSite: 'none', secure: true, maxAge: 90 * 24 * 60 * 60 * 1000 })
+        res.cookie('token', token, { httpOnly: true, sameSite: 'strict', secure: true, maxAge: 90 * 24 * 60 * 60 * 1000 })
         return res.json({
             success: `Usuário Logado com Sucesso!`,
             user: {
